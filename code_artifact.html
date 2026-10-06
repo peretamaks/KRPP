@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КРПП — Вебсайт дисципліни</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Верхня панель навігації зі всіма 4 обов'язковими розділами -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#" onclick="activateTab('home')">
+        <i class="bi bi-kanban-fill text-primary me-2 fs-4"></i>
+        <span>КРПП</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto nav nav-pills" id="navTabs" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" id="tab-home-btn" data-bs-toggle="pill" data-bs-target="#tab-home" type="button" role="tab">
+              <i class="bi bi-house-door me-1"></i>Головна
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="tab-lectures-btn" data-bs-toggle="pill" data-bs-target="#tab-lectures" type="button" role="tab">
+              <i class="bi bi-book me-1"></i>Теми лекцій
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="tab-labs-btn" data-bs-toggle="pill" data-bs-target="#tab-labs" type="button" role="tab">
+              <i class="bi bi-terminal me-1"></i>Лабораторні роботи
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="tab-contacts-btn" data-bs-toggle="pill" data-bs-target="#tab-contacts" type="button" role="tab">
+              <i class="bi bi-person-lines-fill me-1"></i>Контакти викладача
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero-banner">
+    <div class="container text-center">
+      <h1 class="display-6 fw-bold mb-2">Командна розробка програмних проєктів</h1>
+      <p class="lead mb-0 text-white-50">Офіційний навчально-інформаційний портал курсу</p>
+    </div>
+  </header>
+
+  <!-- Основний блок із вмістом сторінок -->
+  <main class="container my-5">
+    <div class="tab-content" id="navTabsContent">
+
+      <!-- ================= 1. ГОЛОВНА СТОРІНКА ТА СИЛАБУС ================= -->
+      <section class="tab-pane fade show active" id="tab-home" role="tabpanel">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="custom-card p-4 h-100">
+              <h3 class="fw-bold text-primary mb-3">
+                <i class="bi bi-journal-text me-2"></i>Силабус дисципліни
+              </h3>
+              <p class="text-secondary lead fs-6">
+                Дисципліна «Командна розробка програмних проєктів» (КРПП) розрахована на формування професійних навичок організації спільних ІТ-проєктів за допомогою гнучких методологій (Agile, Scrum), автоматизації процесів, систем контролю версій та управління задачами у Jira.
+              </p>
+              
+              <h5 class="fw-bold mt-4 mb-3">Очікувані результати навчання:</h5>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item bg-transparent ps-0"><i class="bi bi-check2-circle text-success me-2"></i>Вміння планувати етапи проєкту, формувати Backlog та керувати Sprint у Jira.</li>
+                <li class="list-group-item bg-transparent ps-0"><i class="bi bi-check2-circle text-success me-2"></i>Практичне застосування командних ролей (Product Owner, Scrum Master, Developer, QA).</li>
+                <li class="list-group-item bg-transparent ps-0"><i class="bi bi-check2-circle text-success me-2"></i>Формування інцидентів, фіксація та супровід Bug Report і проведення Code Review.</li>
+              </ul>
+
+              <div class="alert alert-primary d-flex align-items-center mb-0" role="alert">
+                <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                <div>
+                  <strong>Практичний стек:</strong> Atlassian Jira Software, Git / GitHub, HTML5, CSS3, JavaScript.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="custom-card p-4 h-100">
+              <h4 class="fw-bold text-dark mb-3">Параметри курсу</h4>
+              <div class="mb-3">
+                <span class="text-muted d-block small">Обсяг дисципліни:</span>
+                <span class="fw-semibold">4 кредити ECTS (120 академічних годин)</span>
+              </div>
+              <div class="mb-3">
+                <span class="text-muted d-block small">Форма семестрового контролю:</span>
+                <span class="fw-semibold">Диференційований залік / Екзамен</span>
+              </div>
+              <div class="mb-3">
+                <span class="text-muted d-block small">Аудиторні години:</span>
+                <span class="fw-semibold">16 год. лекцій, 32 год. лабораторних</span>
+              </div>
+              <hr>
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" onclick="activateTab('lectures')">
+                  <i class="bi bi-arrow-right-circle me-1"></i>Перейти до лекцій
+                </button>
+                <button class="btn btn-primary" onclick="activateTab('labs')">
+                  <i class="bi bi-terminal me-1"></i>Перейти до лабораторних
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 2. ТЕМИ ЛЕКЦІЙ ================= -->
+      <!-- ================= 2. ТЕМИ ЛЕКЦІЙ ================= -->
+      <section class="tab-pane fade" id="tab-lectures" role="tabpanel">
+        <div class="custom-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h3 class="fw-bold text-primary mb-1"><i class="bi bi-easel me-2"></i>Тематичний план лекцій</h3>
+              <p class="text-muted mb-0">Теоретичний курс та методологічні основи дисципліни</p>
+            </div>
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill">
+              Всього: 8 тем
+            </span>
+          </div>
+
+          <!-- МОДУЛЬ 1 -->
+          <div class="mb-4">
+            <h5 class="fw-bold text-dark border-bottom pb-2 mb-3">
+              <i class="bi bi-folder2-open text-primary me-2"></i>Модуль 1
+            </h5>
+            <div class="list-group shadow-none gap-2">
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 1. Проект та специфіка проектної діяльності в ІТ</h6>
+                  <span class="badge bg-secondary badge-lecture">Модуль 1</span>
+                </div>
+              </div>
+
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 2. Сутність та особливості програмних проектів</h6>
+                  <span class="badge bg-secondary badge-lecture">Модуль 1</span>
+                </div>
+              </div>
+
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 3. Життєвий цикл програмного проекту</h6>
+                  <span class="badge bg-secondary badge-lecture">Модуль 1</span>
+                </div>
+              </div>
+
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 4. Командна організація проектування в IT</h6>
+                  <span class="badge bg-secondary badge-lecture">Модуль 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- МОДУЛЬ 2 -->
+          <div>
+            <h5 class="fw-bold text-dark border-bottom pb-2 mb-3">
+              <i class="bi bi-folder2-open text-primary me-2"></i>Модуль 2
+            </h5>
+            <div class="list-group shadow-none gap-2">
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 5. Поняття CASE-технологій та їх призначення при розробці програмного забезпечення</h6>
+                  <span class="badge bg-primary badge-lecture">Модуль 2</span>
+                </div>
+              </div>
+
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 6. Agile технології в командній розробці програмних проектів</h6>
+                  <span class="badge bg-primary badge-lecture">Модуль 2</span>
+                </div>
+              </div>
+
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 7. Система управління проєктами Jira у розробці програмного забезпечення</h6>
+                  <span class="badge bg-primary badge-lecture">Модуль 2</span>
+                </div>
+              </div>
+
+              <div class="list-group-item list-group-item-action p-3 rounded border">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h6 class="mb-0 fw-bold text-dark">Тема 8. Командна комунікація та soft skills в розробці IT-проєктів</h6>
+                  <span class="badge bg-primary badge-lecture">Модуль 2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= 3. ЛАБОРАТОРНІ РОБОТИ ================= -->
+      <!-- ================= 3. ЛАБОРАТОРНІ РОБОТИ ================= -->
+      <section class="tab-pane fade" id="tab-labs" role="tabpanel">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+          <div>
+            <h3 class="fw-bold text-primary mb-1"><i class="bi bi-laptop me-2"></i>Лабораторні роботи</h3>
+            <p class="text-muted mb-0">Натисніть на назву лабораторної роботи або кнопку, щоб переглянути порядок виконання</p>
+          </div>
+        </div>
+
+        <!-- Адаптивна сітка: 1 колонка на смартфонах, 2 на планшетах, 3 на ПК -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          
+          <!-- Лабораторна 1 -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Виконано</span>
+              </div>
+              <h5 class="fw-bold text-dark mt-1" role="button" onclick="showLabDetails(1)">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">Лабораторна робота №1</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Розробка кейсу «Управління проектами», PMBOK та трикутник проєктів.</p>
+              <button class="btn btn-sm btn-outline-primary w-100 mt-3" onclick="showLabDetails(1)">
+                <i class="bi bi-eye me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+          <!-- Лабораторна 2 -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Виконано</span>
+              </div>
+              <h5 class="fw-bold text-dark mt-1" role="button" onclick="showLabDetails(2)">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">Лабораторна робота №2</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Розробка кейсу «Програмний проект», порівняльний аналіз програмного забезпечення.</p>
+              <button class="btn btn-sm btn-outline-primary w-100 mt-3" onclick="showLabDetails(2)">
+                <i class="bi bi-eye me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+          <!-- Лабораторна 3 -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Виконано</span>
+              </div>
+              <h5 class="fw-bold text-dark mt-1" role="button" onclick="showLabDetails(3)">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">Лабораторна робота №3</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Програмне забезпечення управління проектами: налаштування робочих процесів у Trello.</p>
+              <button class="btn btn-sm btn-outline-primary w-100 mt-3" onclick="showLabDetails(3)">
+                <i class="bi bi-eye me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+          <!-- Лабораторна 4 -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Виконано</span>
+              </div>
+              <h5 class="fw-bold text-dark mt-1" role="button" onclick="showLabDetails(4)">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">Лабораторна робота №4</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Командна організація проектування в ІТ, життєві цикли та модель Такмана.</p>
+              <button class="btn btn-sm btn-outline-primary w-100 mt-3" onclick="showLabDetails(4)">
+                <i class="bi bi-eye me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+          <!-- Лабораторна 5 -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Виконано</span>
+              </div>
+              <h5 class="fw-bold text-dark mt-1" role="button" onclick="showLabDetails(5)">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">Лабораторна робота №5</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Використання CASE-технологій та моделювання програмних систем в UML.</p>
+              <button class="btn btn-sm btn-outline-primary w-100 mt-3" onclick="showLabDetails(5)">
+                <i class="bi bi-eye me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+          <!-- Лабораторна 6-7 (Поточна практична) -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column border-primary border-2 shadow-sm">
+              <div class="mb-2">
+                <span class="badge bg-primary">Поточна робота</span>
+              </div>
+              <h5 class="fw-bold text-primary mt-1" role="button" onclick="showLabDetails(6)">
+                <a href="javascript:void(0)" class="text-decoration-none text-primary">Практична робота №6-7</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Розробка вебсайту дисципліни КРПП з використанням системи Jira (Backlog, Sprint, Bug-report).</p>
+              <button class="btn btn-sm btn-primary w-100 mt-3" onclick="showLabDetails(6)">
+                <i class="bi bi-play-circle me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+          <!-- Лабораторна 8 -->
+          <div class="col">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+              <div class="mb-2">
+                <span class="badge bg-secondary">Заплановано</span>
+              </div>
+              <h5 class="fw-bold text-dark mt-1" role="button" onclick="showLabDetails(7)">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">Лабораторна робота №8</a>
+              </h5>
+              <p class="text-muted small flex-grow-1">Командна комунікація, розвиток Soft Skills, управління конфліктами й тайм-менеджмент.</p>
+              <button class="btn btn-sm btn-outline-primary w-100 mt-3" onclick="showLabDetails(7)">
+                <i class="bi bi-eye me-1"></i>Порядок виконання
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= 4. КОНТАКТИ ВИКЛАДАЧА ================= -->
+      <section class="tab-pane fade" id="tab-contacts" role="tabpanel">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="custom-card p-4 p-md-5">
+              <h3 class="fw-bold text-primary mb-4 text-center">
+                <i class="bi bi-person-badge me-2"></i>Контакти викладача
+              </h3>
+
+              <div class="row align-items-center g-4">
+                <div class="col-md-4 text-center">
+                  <div class="avatar-wrapper shadow-sm mb-3">
+                    <i class="bi bi-person-fill"></i>
+                  </div>
+                  <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Викладач курсу</span>
+                </div>
+
+                <div class="col-md-8">
+                  <h4 class="fw-bold mb-1">Кардаш Оксана Любомирівна</h4>
+                  <p class="text-muted mb-3">Кандидат технічних наук, доцент кафедри комп'ютерних наук</p>
+
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-envelope-at-fill text-primary me-3 fs-5"></i>
+                      <div>
+                        <span class="text-muted d-block small">Корпоративна пошта:</span>
+                        <a href="mailto:o.l.kardash@nuwm.edu.ua" class="text-decoration-none fw-semibold">o.l.kardash@nuwm.edu.ua</a>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-geo-alt-fill text-primary me-3 fs-5"></i>
+                      <div>
+                        <span class="text-muted d-block small">Кафедра:</span>
+                        <span class="fw-semibold">Комп'ютерних технологій та економічної кібернетики</span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-clock-history text-primary me-3 fs-5"></i>
+                      <div>
+                        <span class="text-muted d-block small">Консультації та захист робіт:</span>
+                        <span class="fw-semibold">Щочетверга, 14:00 – 16:00 (онлайн)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Модальне вікно для відображення порядку виконання лабораторних робіт -->
+  <div class="modal fade" id="labDetailsModal" tabindex="-1" aria-labelledby="labModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fw-bold" id="labModalLabel">Порядок виконання</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4" id="labModalContent">
+          <!-- Контент підставляється динамічно через JS -->
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Закрити</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-3 text-center small border-top">
+    <div class="container">
+      <span>Навчальний проєкт з дисципліни «Командна розробка програмних проєктів» &copy; 2026</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
